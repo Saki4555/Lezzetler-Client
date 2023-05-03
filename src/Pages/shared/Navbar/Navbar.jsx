@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -18,8 +19,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className='font-bold'><a>Home</a></li>
-                        <li className='font-bold'><a>Blog</a></li>
+                        <li className='font-bold bg-inherit'><NavLink to='/'>Home</NavLink></li>
+                        <li className='font-bold'><NavLink to='/blog'>Blog</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
