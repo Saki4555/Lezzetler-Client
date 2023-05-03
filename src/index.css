@@ -8,3 +8,7 @@
 .text-1{
   @apply text-[#FF5733]
 }
+
+.bg-1{
+  @apply bg-[#FF5733]
+}

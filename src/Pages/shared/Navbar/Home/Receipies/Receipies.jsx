@@ -1,14 +1,25 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Recipie from './Recipie';
+import RecipeBanner from './RecipeBanner/RecipeBanner';
 
 const Receipies = () => {
 
     const chef = useLoaderData();
-    console.log(chef);
+    const { recipes } = chef;
+    // console.log(recipes);
     return (
-        <div>
-            <h1>recipies</h1>
-        </div>
+        <>
+        <RecipeBanner chef={chef}></RecipeBanner>
+            <div className='grid lg:grid-cols-2 my-container gap-4'>
+                {
+                    recipes.map(r => <Recipie
+                        key={r.recipe_id}
+                        recipe={r}
+                    ></Recipie>)
+                }
+            </div>
+        </>
     );
 };
 

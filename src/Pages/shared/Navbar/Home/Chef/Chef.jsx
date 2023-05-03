@@ -10,8 +10,8 @@ const Chef = ({ chef }) => {
             <div className="card-body">
                 <h2 className="card-title">{chef_name}</h2>
                 <p>Years of experience : {years_of_experience}</p>
-                <div className='flex items-center gap-2'><FaThumbsUp className='text-blue-500'></FaThumbsUp>{num_recipes}</div>
-                <p>{likes}</p>
+                <div className='flex items-center gap-2'><FaThumbsUp className='text-blue-500'></FaThumbsUp>{likes}</div>
+                <p>Number of Recipes : {num_recipes}</p>
                 <div className="card-actions justify-end">
                     <button className="btn bg-[#FF5733] border-0"><Link to={`/recipies/${id}`}>View Recipies</Link></button>
                 </div>
