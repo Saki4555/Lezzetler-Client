@@ -8,6 +8,7 @@ import Login from "../Pages/shared/Navbar/Home/Login/Login";
 import Register from "../Pages/shared/Navbar/Home/Login/Register";
 import ErrorElement from "../Pages/ErrorElement/ErrorElement";
 import PrivateRoutes from "./PrivateRoutes";
+import Blogs from "../Pages/shared/Navbar/Home/Blogs/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/blog',
-        element: <div>blog</div>
+        element: <Blogs></Blogs>
       },
       {
         path: '/recipies/:id',
