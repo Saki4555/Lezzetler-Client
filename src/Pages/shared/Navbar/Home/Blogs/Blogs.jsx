@@ -1,13 +1,24 @@
 import React from 'react';
-import { Document, Page, Text, View, PDFDownloadLink } from '@react-pdf/renderer';
+import { Document, Page, Text, View, PDFDownloadLink, StyleSheet } from '@react-pdf/renderer';
 
+const styles = StyleSheet.create({
+    text: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      color: '#ff0000',
+      padding: '10px',
+    },
 
+  });
 const MyDocument = () => (
     <Document>
         <Page>
             <View>
-                <Text>You will learn advanced Reacr Here</Text>
+                <Text style={styles.text}>You will learn advanced Reacr Here. </Text>
             </View>
+
+            <View>Difference between nodejs and express js.</View>
         </Page>
     </Document>
 );
@@ -23,7 +34,7 @@ const Blogs = () => {
 
     return (
         <div className='my-container mt-10'>
-            <button onClick={handleGeneratePdf} className='btn mb-4 mx-auto'>Generate PDF</button>
+            <button onClick={handleGeneratePdf} className='btn mb-4 mr-3 mx-auto'>Generate PDF</button>
             {pdfGenerated && (
                 <PDFDownloadLink document={<MyDocument />} fileName="my-document.pdf">
                     Download PDF

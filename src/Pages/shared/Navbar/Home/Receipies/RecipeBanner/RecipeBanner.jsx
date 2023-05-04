@@ -18,8 +18,8 @@ const RecipeBanner = ({ chef }) => {
                     <div>
                         <h1 className='text-4xl font-bold mt-4 text-slate-700'>{chef_name}</h1>
                         <p>{chef_name} is a culinary experts who have gained worldwide recognition for his skills and achievements in the culinary arts. </p>
-                        <div className='flex gap-2 items-center mt-3'><FaThumbsUp></FaThumbsUp>: {likes}</div>
-                        <p>Number of Recipes : {num_recipes}</p>
+                        <div className='flex gap-2 items-center mt-3 mb-2'><FaThumbsUp></FaThumbsUp>: {likes}</div>
+                        <p className='mb-2'>Number of Recipes : {num_recipes}</p>
                         <p>Years of experience : {years_of_experience}</p>
                     </div>
                 </div>
