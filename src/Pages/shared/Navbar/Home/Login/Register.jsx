@@ -57,20 +57,20 @@ const Register = () => {
                 <form onSubmit={handleRegister}>
                     <div className="mb-4">
                         <label className="block mb-2 font-extrabold">Name</label>
-                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="text" name='name' placeholder="name" required />
+                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="text" name='name' placeholder="name" required autoComplete='off' />
                     </div>
                     <div className="mb-4">
                         <label className="block mb-2 font-extrabold">Email</label>
-                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="email" name='email' placeholder="email" required />
+                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="email" name='email' placeholder="email" required autoComplete='off' />
                     </div>
                     <div className="mb-4">
                         <label className="block mb-2 font-extrabold">Password</label>
-                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="password" name='password' placeholder="password" required />
+                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="password" name='password' placeholder="password" required autoComplete='off' />
                     </div>
 
                     <div className="mb-4">
                         <label className="block mb-2 font-extrabold">PhotoUrl</label>
-                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="text" name='photo' placeholder="url" required />
+                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="text" name='photo' placeholder="url" required autoComplete='off'/>
                     </div>
 
                     <button type='submit' className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200">Sign Up</button>

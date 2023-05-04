@@ -82,11 +82,11 @@ const Login = () => {
 
                     <div className="mb-4">
                         <label className="block mb-2 font-extrabold">Email</label>
-                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="email" name='email' placeholder="email" />
+                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="email" name='email' placeholder="email" autoComplete='off'/>
                     </div>
                     <div className="mb-4">
                         <label className="block mb-2 font-extrabold">Password</label>
-                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="password" name='password' placeholder="password" />
+                        <input className="inline-block w-full p-4 leading-6 text-lg font-bold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="password" name='password' placeholder="password" autoComplete='off'/>
                     </div>
 
 
