@@ -25,12 +25,12 @@ const Navbar = () => {
                             <li className='font-bold'><a>Blog</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-2xl">Lezzetler</a>
+                    <Link to='/' className="btn btn-ghost normal-case text-2xl">Lezzetler</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className='font-bold bg-inherit'><NavLink to='/'>Home</NavLink></li>
-                        <li className='font-bold'><NavLink to='/blog'>Blog</NavLink></li>
+                        <li className='font-bold bg-inherit'><NavLink to='/' className={({ isActive }) => (isActive ? 'text-white' : '')}>Home</NavLink></li>
+                        <li className='font-bold'><NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-white' : '')}>Blog</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

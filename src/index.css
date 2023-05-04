@@ -12,3 +12,7 @@
 .bg-1{
   @apply bg-[#FF5733]
 }
+
+.active{
+  @apply font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-blue-400
+}

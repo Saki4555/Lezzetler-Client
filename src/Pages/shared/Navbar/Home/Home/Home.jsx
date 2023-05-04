@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import Chef from '../Chef/Chef';
+import Spinner from '../../../../../Spinner/Spinner';
 
 const Home = () => {
     const chefData = useLoaderData();
