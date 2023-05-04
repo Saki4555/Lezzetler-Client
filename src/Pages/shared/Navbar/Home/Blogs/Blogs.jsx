@@ -15,7 +15,7 @@ const MyDocument = () => (
     <Document>
         <Page>
             <View>
-                <Text style={styles.text}>You will learn advanced Reacr Here. </Text>
+                <Text style={styles.text}>You will learn advanced React Here. </Text>
             </View>
 
             <View>Difference between nodejs and express js.</View>
