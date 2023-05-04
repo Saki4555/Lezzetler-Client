@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LazyLoad from 'react-lazy-load';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Recipie = ({ recipe }) => {
@@ -25,7 +26,8 @@ const Recipie = ({ recipe }) => {
         <div className='bg-orange-50 p-3 shadow-lg rounded-md border border-orange-400'>
             <div className='flex gap-3'>
                 <div>
-                    <img className='rounded' src={recipe_img} alt="" />
+                    <LazyLoad><img className='rounded' src={recipe_img} alt="" /></LazyLoad>
+                    
                     <p className='text-xl font-medium mt-2'>Rating : {rating}</p>
                 </div>
                 <div>

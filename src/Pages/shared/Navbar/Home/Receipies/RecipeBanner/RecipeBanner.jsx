@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaThumbsUp } from "react-icons/fa";
+import LazyLoad from 'react-lazy-load';
 
 const RecipeBanner = ({ chef }) => {
     console.log(chef);
@@ -8,7 +9,10 @@ const RecipeBanner = ({ chef }) => {
         <div className='my-container mt-2 mb-10'>
             <div className='bg-orange-200 rounded-md flex gap-10'>
                 <div className='w-1/2'>
-                    <img className='rounded' src={chef_picture} alt="" />
+                    <LazyLoad>
+                        <img className='rounded' src={chef_picture} alt="" />
+                    </LazyLoad>
+
                 </div>
                 <div className='flex justify-center items-center w-1/2'>
                     <div>
