@@ -6,11 +6,13 @@ import Home from "../Pages/shared/Navbar/Home/Home/Home";
 import Receipies from "../Pages/shared/Navbar/Home/Receipies/Receipies";
 import Login from "../Pages/shared/Navbar/Home/Login/Login";
 import Register from "../Pages/shared/Navbar/Home/Login/Register";
+import ErrorElement from "../Pages/ErrorElement/ErrorElement";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       {
         path: '/',
