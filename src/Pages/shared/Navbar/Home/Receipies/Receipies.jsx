@@ -3,6 +3,7 @@ import { useLoaderData, useNavigation } from 'react-router-dom';
 import Recipie from './Recipie';
 import RecipeBanner from './RecipeBanner/RecipeBanner';
 import Spinner from '../../../../../Spinner/Spinner';
+import { ToastContainer } from 'react-toastify';
 
 const Receipies = () => {
     const navigation = useNavigation()

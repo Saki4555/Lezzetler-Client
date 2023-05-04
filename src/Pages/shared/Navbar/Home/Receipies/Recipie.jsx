@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Recipie = ({ recipe }) => {
-    
+
+    const [isDisabled, setIsDisabled] = useState(false);
+
+    const handleFavorite = () => {
+        toast.success('added successfully', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+        setIsDisabled(true);
+    };
+
     const { cooking_method, ingredients, rating, recipe_id, recipe_img, recipe_name } = recipe;
     // console.log(recipe);
     return (
@@ -22,10 +39,12 @@ const Recipie = ({ recipe }) => {
                 </div>
             </div>
             <div className=''>
-                
+
                 <p className='font-medium mt-2'>Cooking Method : {cooking_method}</p>
-                <button className="btn mt-3 bg-1 border-0 shadow">Add to favorite</button>
+                <button onClick={handleFavorite} disabled={isDisabled} className="btn mt-3 bg-1 border-0 shadow">Add to favorite</button>
+               
             </div>
+
         </div>
     );
 };
