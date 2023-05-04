@@ -3,7 +3,14 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error));
+    }
     console.log(user);
     return (
         <div className='my-container mx-auto mt-2'>
@@ -32,7 +39,7 @@ const Navbar = () => {
                             <div  className="tooltip tooltip-bottom" data-tip={user?.displayName}>
                                 <img className='w-12 h-12 object-cover rounded-lg' src={user?.photoURL} alt='' />
                             </div>
-                            <button className='btn ml-3'>Sign Out</button>
+                            <button onClick={handleLogOut} className='btn ml-3'>Sign Out</button>
                         </>
                             : <Link to='/login' className="btn">Login</Link>
                     }
