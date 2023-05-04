@@ -7,6 +7,7 @@ import Receipies from "../Pages/shared/Navbar/Home/Receipies/Receipies";
 import Login from "../Pages/shared/Navbar/Home/Login/Login";
 import Register from "../Pages/shared/Navbar/Home/Login/Register";
 import ErrorElement from "../Pages/ErrorElement/ErrorElement";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: ({ params }) => fetch('http://localhost:5000/chefs')
+        loader: ({ params }) => fetch('https://assignment-10-server-saki4555.vercel.app/chefs')
 
       },
       {
@@ -26,8 +27,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/recipies/:id',
-        element: <Receipies></Receipies>,
-        loader: ({params}) => fetch(`http://localhost:5000/chefs/${params.id}`)
+        element: <PrivateRoutes><Receipies></Receipies></PrivateRoutes>,
+        loader: ({ params }) => fetch(`https://assignment-10-server-saki4555.vercel.app/chefs/${params.id}`)
       },
       {
         path: '/login',

@@ -1,6 +1,9 @@
 import React from 'react';
 import { useLoaderData, useNavigation } from 'react-router-dom';
 import Chef from '../Chef/Chef';
+import Spinner from '../../../../../Spinner/Spinner';
+import PopularFoods from '../PopularFoods/PopularFoods';
+import FrequentlyAsked from '../FrequentlyAsked/FrequentlyAsked';
 
 
 const Home = () => {
@@ -32,6 +35,9 @@ const Home = () => {
                     ></Chef>)
                 }
             </div>
+
+            <PopularFoods></PopularFoods>
+            <FrequentlyAsked></FrequentlyAsked>
         </div>
     );
 };
