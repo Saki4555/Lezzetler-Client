@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
@@ -25,10 +26,22 @@ const Register = () => {
                 const createdUser = result.user;
                 console.log(createdUser);
                 form.reset();
+                userProfile(result.user, name, photo)
             })
             .catch(error => {
                 console.log(error.message);
             })
+
+    }
+
+    const userProfile = (user, userName, url) =>{
+        updateProfile(user, {
+            displayName: userName, photoURL: url
+          }).then(() => {
+           
+          }).catch((error) => {
+            console.log(error.message);
+          });
     }
 
         return (

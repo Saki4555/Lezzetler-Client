@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
+    console.log(user);
     return (
         <div className='my-container mx-auto mt-2'>
             <div className="navbar bg-[#FF5733] rounded">
@@ -24,7 +27,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login' className="btn">Login</Link>
+                    {
+                        user ? <>
+                            <div  className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                <img className='w-12 h-12 object-cover rounded-lg' src={user?.photoURL} alt='' />
+                            </div>
+                            <button className='btn ml-3'>Sign Out</button>
+                        </>
+                            : <Link to='/login' className="btn">Login</Link>
+                    }
                 </div>
             </div>
         </div>
