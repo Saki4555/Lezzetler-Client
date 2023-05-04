@@ -7,14 +7,15 @@ const Home = () => {
     const chefData = useLoaderData();
     // console.log(chefData);
 
-    const navigation = useNavigation()
+    const navigation = useNavigation();
+    console.log(navigation.state);
     if (navigation.state === 'loading') {
-      return <Spinner></Spinner>
+      return <Spinner></Spinner>;
     }
     return (
         <div>
             <div className='my-container mx-auto mt-4 relative'>
-                <img className='w-full h-1/2 object-cover rounded-lg' src="/public/home2.jpg" alt="" />
+                <img className='w-full h-1/2 object-cover rounded-lg' src='https://i.ibb.co/pdjdTyh/home2.jpg' alt="" />
                 <div className='absolute lg:left-1/4 top-1/4'>
                     <div className='w-full p-4 lg:p-0 lg:w-3/4 overflow-y-hidden-hidden'>
                         <h1 className='lg:text-4xl font-bold text-white mb-3'>Welcome to <span className='text-1'>Lezzetler</span> - Where Deliciousness Awaits!</h1>
