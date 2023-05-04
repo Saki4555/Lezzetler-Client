@@ -1,9 +1,14 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import Recipie from './Recipie';
 import RecipeBanner from './RecipeBanner/RecipeBanner';
+import Spinner from '../../../../../Spinner/Spinner';
 
 const Receipies = () => {
+    const navigation = useNavigation()
+    if (navigation.state === 'loading') {
+      return <Spinner></Spinner>
+    }
 
     const chef = useLoaderData();
     const { recipes } = chef;

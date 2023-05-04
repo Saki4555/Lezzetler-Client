@@ -1,10 +1,15 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import Chef from '../Chef/Chef';
 
 const Home = () => {
     const chefData = useLoaderData();
     // console.log(chefData);
+
+    const navigation = useNavigation()
+    if (navigation.state === 'loading') {
+      return <Spinner></Spinner>
+    }
     return (
         <div>
             <div className='my-container mx-auto mt-4 relative'>

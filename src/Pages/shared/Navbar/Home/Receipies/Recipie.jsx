@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Recipie = ({ recipe }) => {
+    
     const { cooking_method, ingredients, rating, recipe_id, recipe_img, recipe_name } = recipe;
     // console.log(recipe);
     return (
