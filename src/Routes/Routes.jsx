@@ -5,6 +5,7 @@ import Main from "../layouts/Main";
 import Home from "../Pages/shared/Navbar/Home/Home/Home";
 import Receipies from "../Pages/shared/Navbar/Home/Receipies/Receipies";
 import Login from "../Pages/shared/Navbar/Home/Login/Login";
+import Register from "../Pages/shared/Navbar/Home/Login/Register";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
       }
     ]
   },
