@@ -35,14 +35,14 @@ const Recipie = ({ recipe }) => {
                     <p className='font-bold'>Ingredients :</p>
                     <ul>
                         {
-                            ingredients.map((i, ind) => <li className='font-sm font-medium' key={ind}>{i}</li>)
+                            ingredients.map((i, ind) => <li className='font-sm text-sm' key={ind}>{i}</li>)
                         }
                     </ul>
                 </div>
             </div>
             <div className=''>
 
-                <p className='font-medium mt-2'>Cooking Method : {cooking_method}</p>
+                <p className='font-medium text-sm mt-2'><span className='font-extrabold'>Cooking Method</span> : {cooking_method}</p>
                 <button onClick={handleFavorite} disabled={isDisabled} className="btn mt-3 bg-1 border-0 shadow">Add to favorite</button>
                
             </div>
